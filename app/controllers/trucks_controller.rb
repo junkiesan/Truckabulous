@@ -12,13 +12,13 @@ class TrucksController < ApplicationController
   end
 
   def create
-    @truck = Truck.new(params[:truck])
+    @truck = Truck.new(truck_params)
     if @truck.save
       redirect_to truck_path(@truck)
     else
       render :new
+    end
   end
-end
 
 private
 
