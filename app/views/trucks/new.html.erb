@@ -1,1 +1,17 @@
-<h1>Add a truck</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Add a new truck</h1>
+
+      <%= simple_form_for @truck do |f| %>
+        <%= f.input :name %>
+        <%= f.input :category %>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <p><%= link_to "Back to homepage", root_path %></p>
+</div>

@@ -1,1 +1,24 @@
-<h1>homepage</h1>
+<div class="banner" style="background-image: url('https://source.unsplash.com/random');">
+  <div class="banner-content">
+    <h1>Truckabulous</h1>
+    <br>
+    <a><%= link_to "Add a truck", new_truck_path, class: "btn btn-outline-light" %></a>
+  </div>
+</div>
+<div class="card">
+  <div class="row">
+    <% @trucks.each do |truck| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+          <div class="card-description">
+            <h2><%= truck.name %></h2>
+          </div>
+          <%= link_to "", truck_path(truck), class: 'card-link' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
+<br>
+<br>
