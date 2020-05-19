@@ -1,8 +1,6 @@
 class TrucksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  authorize @trucks
-
   def index
     @trucks = policy_scope(Truck)
   end
