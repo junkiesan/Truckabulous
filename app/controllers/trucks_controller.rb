@@ -1,4 +1,5 @@
 class TrucksController < ApplicationController
+  authorize @trucks
   def index
     @trucks = Truck.all
   end

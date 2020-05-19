@@ -12,9 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2020_05_19_092938) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "date"
+    t.integer "number_of_participants"
+    t.bigint "user_id", null: false
+    t.bigint "truck_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["truck_id"], name: "index_bookings_on_truck_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "trucks", force: :cascade do |t|
     t.string "name"
@@ -23,6 +33,8 @@ ActiveRecord::Schema.define(version: 2020_05_19_092938) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_trucks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,4 +50,6 @@ ActiveRecord::Schema.define(version: 2020_05_19_092938) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "trucks"
+  add_foreign_key "bookings", "users"
 end
