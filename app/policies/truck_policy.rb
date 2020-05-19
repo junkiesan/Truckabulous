@@ -6,7 +6,7 @@ class TruckPolicy < ApplicationPolicy
   end
 
   def index
-    @tucks = policy_scope(Truck).order(created_at: :desc)
+    @trucks = policy_scope(Truck).order(created_at: :desc)
   end
 
   def show?
