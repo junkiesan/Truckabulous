@@ -1,28 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1290&q=80);">
-<div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'night-truck.jpeg' %>');">
+<div class="card-whole">
   <section>
     <h1 class="_18nvpe4">Rent your Concept Truck</h1>
   </section>
-  <form data-arrive-id="wmpw-form" action="/become-a-host" id="wmpw-form">
-    <input type="hidden" name="from_sh" value="1">
-    <div>
-      <div style="margin-top: 20px; margin-left: 10px; margin-right: 0px;">
-        <div class="intro">Fill in your truck's information</div><br>
+    <div class="card-new-truck">
+      <div class="intro">Fill in your truck's information:</div>
         <div style="margin-top: 8px; margin-bottom: 8px;">
-          <label class='form'>
+          <label class='form w-100'>
             <%= simple_form_for @truck do |f| %>
-            <%= f.input :name %>
-            <%= f.input :category, collection: Truck::CATEGORIES%>
-            <%= f.input :price %>
-            <%= f.input :description %>
-            <%= f.button :submit, class: 'btn btn-outline-success'%>
+            <%= f.input :name, label: false, placeholder: 'Name' %>
+            <%= f.input :category, label: false, prompt: 'Category', collection: Truck::CATEGORIES%>
+            <%= f.input :price, label: false, placeholder: 'Price' %>
+            <%= f.input :description, label: false, placeholder: 'Description' %>
+            <%= f.button :submit, class: 'btn btn-outline-dark'%>
             <% end %>
           </label>
           </div>
-        </div>
+          <%= link_to "Back to homepage", root_path %>
       </div>
-    </form>
-    <p><%= link_to "Back to homepage", root_path %></p>
   </div>
 </div>
 

@@ -21,6 +21,19 @@
     }
 }
 
+.card-new-truck {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 360px;
+}
+
+.card-whole {
+    position: absolute;
+    // top: 100px;
+    right: 100px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

@@ -2,6 +2,11 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  height: 100vh;
+  > .container {
+    margin-top: 150px;
+  }
+  position: relative;
 }
 
 .banner h1 {
