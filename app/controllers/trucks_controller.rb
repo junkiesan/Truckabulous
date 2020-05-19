@@ -19,7 +19,6 @@ class TrucksController < ApplicationController
     @truck = Truck.new(truck_params)
     @truck.user = current_user
     authorize @truck
-
     if @truck.save
       flash[:notice] = 'Truck was successfully created.'
       redirect_to truck_path(@truck)
@@ -32,7 +31,7 @@ class TrucksController < ApplicationController
 private
 
   def truck_params
-    params.require(:truck).permit(:name)
+    params.require(:truck).permit(:name, :category, :price, :description)
   end
 
 end

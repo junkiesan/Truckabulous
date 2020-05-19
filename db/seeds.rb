@@ -25,3 +25,4 @@ User.destroy_all
 User.create!(email: 'romain@yolo.fr', password: 'romain' )
 Truck.create!(name: 'yoga', user: User.first)
 
+
