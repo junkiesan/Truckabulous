@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to trucks_path, class: "navbar-brand" do %>
     <i class="fas fa-truck"></i>
     <%#= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
@@ -13,7 +13,7 @@
     <ul class="navbar-nav mr-auto">
       <%# if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Rent your truck", "#", class: "nav-link" %>
+          <%= link_to "Rent your truck", new_truck_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Need help ?", "#", class: "nav-link" %>

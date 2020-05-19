@@ -1,1 +1,65 @@
-<h1>Add a truck</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'night-truck.jpeg' %>');">
+<div class="card-whole">
+  <section>
+    <h1 class="_18nvpe4">Rent your Concept Truck</h1>
+  </section>
+    <div class="card-new-truck">
+      <div class="intro">Fill in your truck's information:</div>
+        <div style="margin-top: 8px; margin-bottom: 8px;">
+          <label class='form w-100'>
+            <%= simple_form_for @truck do |f| %>
+            <%= f.input :name, label: false, placeholder: 'Name' %>
+            <%= f.input :category, label: false, prompt: 'Category', collection: Truck::CATEGORIES%>
+            <%= f.input :price, label: false, placeholder: 'Price' %>
+            <%= f.input :description, label: false, placeholder: 'Description' %>
+            <%= f.button :submit, class: 'btn btn-outline-dark'%>
+            <% end %>
+          </label>
+          </div>
+          <%= link_to "Back to homepage", root_path %>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
