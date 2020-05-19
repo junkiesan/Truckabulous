@@ -1,17 +1,72 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h1>Add a new truck</h1>
-
-      <%= simple_form_for @truck do |f| %>
-        <%= f.input :name %>
-        <%= f.input :category %>
-        <%= f.input :price %>
-        <%= f.input :description %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-      <% end %>
-    </div>
+  <div data-arrive-module-id="lazy-image-backgrounds" data-arrive-image="{&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;https://a0.muscache.com/4ea/air/v2/pictures/9d08d356-59b9-4ac4-9f41-5b9c13c2b211.jpg?t=r:w1440-h960-sfit,e:fwebp-c75&quot;,&quot;height&quot;:&quot;100%&quot;,&quot;width&quot;:&quot;100%&quot;,&quot;backgroundImageStyle&quot;:&quot;linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6))&quot;}" class="_18xfr7x" style="width: 100%; height: 100%; background-size: cover; background-image: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(&quot;https://a0.muscache.com/4ea/air/v2/pictures/9d08d356-59b9-4ac4-9f41-5b9c13c2b211.jpg?t=r:w1440-h960-sfit,e:fwebp-c75&quot;);">
   </div>
-  <br>
-  <p><%= link_to "Back to homepage", root_path %></p>
+  <section>
+    <h1 class="_18nvpe4">Rent your Concept Truck</h1>
+  </section>
+  <form data-arrive-id="wmpw-form" action="/become-a-host" id="wmpw-form">
+    <input type="hidden" name="from_sh" value="1">
+    <div>
+      <div style="margin-top: 24px; margin-left: 0px; margin-right: 0px;">
+        <div class="intro">Fill in your truck's information</div><br>
+        <div style="margin-top: 8px; margin-bottom: 8px;">
+          <label class='form'>
+            <%= simple_form_for @truck do |f| %>
+            <%= f.input :name %>
+            <%= f.input :category, collection: Truck::CATEGORIES%>
+            <%= f.input :price %>
+            <%= f.input :description %>
+            <%= f.button :submit, class: 'btn btn-outline-success'%>
+            <% end %>
+          </label>
+          </div>
+        </div>
+      </div>
+    </form>
+    <p><%= link_to "Back to homepage", root_path %></p>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

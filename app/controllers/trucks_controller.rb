@@ -23,11 +23,11 @@ class TrucksController < ApplicationController
     end
   end
 
-  def destroy
-    @truck = Truck.find(params[:id])
-    @truck.destroy
-    redirect_to truck_path
-  end
+  # def destroy
+  #   @truck = Truck.find(params[:id])
+  #   @truck.destroy
+  #   redirect_to truck_path
+  # end
 
 private
 
