@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :trucks, only: [:index, :show, :create, :new] do
   resources :bookings, only: [:new, :create, :show, :delete]
 end
+  get "/profile", to: 'pages#profile'
 end
