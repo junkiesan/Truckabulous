@@ -23,6 +23,5 @@ Truck.destroy_all
 User.destroy_all
 
 User.create!(email: 'romain@yolo.fr', password: 'romain' )
-Truck.create!(name: 'yoga', user: User.first)
-
-
+Truck.create!(name: 'Yoga Teacher', category: 'Yoga', price: 100, user:User.first)
+Truck.create!(name: 'Drink n Code', category: 'Cocktails', price: 100, user:User.first)
