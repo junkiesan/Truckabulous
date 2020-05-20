@@ -9,6 +9,14 @@ class TrucksController < ApplicationController
     @truck = Truck.find(params[:id])
     @booking = Booking.new
     authorize @truck
+
+    @trucks = Truck.geocoded
+    @markers = @trucks.map do |truck|
+    {
+      lat: flat.latitude,
+      lng: flat.longitude
+    }
+    end
   end
 
   def new
