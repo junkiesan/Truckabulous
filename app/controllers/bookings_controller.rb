@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
-    authorize @truck
+    authorize @booking
   end
 
   def new
@@ -20,8 +20,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @truck = Truck.find(params[:truck_id])
     @booking.truck = @truck
+    @booking.user = current_user
+    authorize @truck
     if @booking.save
-      redirect_to truck_path(@truck)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
