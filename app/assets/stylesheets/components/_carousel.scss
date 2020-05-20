@@ -1,0 +1,19 @@
+.carousel {
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+
+  > .container {
+    margin-top: 150px;
+  }
+  position: relative;
+}
+
+
+.carousel-inner {
+  height: 50vh;
+  border-radius: 8px;
+}
