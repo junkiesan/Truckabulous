@@ -1,4 +1,5 @@
 <%# Banner section %>
+<body style="background-color: white">
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1290&q=80);">
   <div class="container">
@@ -30,9 +31,11 @@
 <br>
 <br>
   <div class="cards">
+    <%= link_to truck_path(Truck.find(2)) do  %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
       Yoga
     </div>
+    <% end %>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532635239-06e08db8f247?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
       Cocktails
@@ -55,3 +58,4 @@
     </div>
   </div>
 </div>
+</body>
