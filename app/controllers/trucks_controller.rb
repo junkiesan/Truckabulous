@@ -3,6 +3,7 @@ class TrucksController < ApplicationController
 
   def index
     @trucks = policy_scope(Truck)
+    @trucks = Truck.all
   end
 
   def show
