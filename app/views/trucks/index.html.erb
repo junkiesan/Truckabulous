@@ -3,20 +3,16 @@
 </div>
 
 <div class="container-cards-index d-flex flex-wrap">
-
-<div>
   <% @trucks.each do |truck| %>
     <div class="col-4">
       <div class="card" style="width: 100%;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"> <%= truck.name %></h5>
-          <p class="card-text"><%= truck.price %></p>
+          <p class="card-text"> Price : <%=truck.price %></p>
           <a href="#" class="btn btn-trucks-index">Book now</a>
         </div>
       </div>
-  </div>
+    </div>
   <% end %>
-</div>
-
 </div>

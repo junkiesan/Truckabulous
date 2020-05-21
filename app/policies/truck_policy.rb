@@ -26,4 +26,8 @@ class TruckPolicy < ApplicationPolicy
   def destroy?
     record.user == current_user # Only truck creator can destroy a truck
   end
+
+  def create_booking?
+    true
+  end
 end

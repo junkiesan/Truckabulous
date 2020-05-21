@@ -16,25 +16,30 @@ puts "Destroy Users"
 User.destroy_all
 
 
+
+User.create!(email: 'romain@yolo.fr', password: 'romain' )
+
 puts 'Creating user...'
 10.times do
   users = User.new(
     name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password,
-  )
+    )
   users.save!
-puts 'New user!'
+  puts 'New user!'
 end
 
+kenza = User.create(name: 'Kenza', email: 'k.mahresi@gmail.com', password: 'kenza1')
 
-Truck.create!(name: 'Tacos Tuesday', category: 'Food', price: 150, description: 'The best Mexican tacos in town! Vegeterian options also available', user:User.first)
+
+Truck.create!(name: 'Tacos Tuesday', category: 'Food', price: 150, description: 'The best Mexican tacos in town! Vegeterian options also available', user: kenza)
 Truck.create!(name: 'Sushi & Sashimi', category: 'Food', price: 200, description: 'Fresh fish for your sushi party!', user:User.first)
 
 Truck.create!(name: 'Yoga Flow', category: 'Yoga', price: 190, description: 'Enjoy this unique Yoga class for a relaxed & zen attitude', user:User.first)
 Truck.create!(name: 'Dynamic Yoga', category: 'Yoga', price: 150, description: 'A mix of traditional Yoga with a dynamic twist!', user:User.first)
 
-Truck.create!(name: 'Spicy Cocktails', category: 'Cocktails', price: 120, description: 'Spice up your event with our amazing & delicious cocktails!', user:User.first)
+Truck.create!(name: 'Spicy Cocktails', category: 'Cocktails', price: 120, description: 'Spice up your event with our amazing & delicious cocktails!', user: kenza)
 Truck.create!(name: 'Drink n Code', category: 'Cocktails', price: 100, description: 'Throwing a code AND drink party? This truck is for you!', user:User.first)
 
 Truck.create!(name: 'Puppy love', category: 'Pups & Kitties', price: 110, description: 'The truck for animal lovers! Half of total price goes to an animal shelter association!', user:User.first)
@@ -57,6 +62,6 @@ Truck.create!(name: 'Magic', category: 'Kids', price: 90, description: 'Magician
 # puts 'Trucks created you have the best db ever bae!'
 
 
-# User.create!(email: 'romain@yolo.fr', password: 'romain' )
-# Truck.create!(name: 'Yoga Teacher', category: 'Yoga', price: 100, user:User.first)
-# Truck.create!(name: 'Drink n Code', category: 'Cocktails', price: 100, user:User.first)
+# user = User.new(email: 'romain@yolo.fr', password: 'romain' )
+# user.save!
+

@@ -12,6 +12,7 @@
             <%= f.input :category, label: false, prompt: 'Category', collection: Truck::CATEGORIES%>
             <%= f.input :price, label: false, placeholder: 'Price' %>
             <%= f.input :description, label: false, placeholder: 'Description' %>
+            <%= f.input :photo, as: :file %>
             <%= f.button :submit, class: 'btn btn-outline-dark'%>
             <% end %>
           </label>
