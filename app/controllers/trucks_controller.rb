@@ -13,8 +13,9 @@ class TrucksController < ApplicationController
     @trucks = Truck.geocoded
     @markers = @trucks.map do |truck|
     {
-      lat: flat.latitude,
-      lng: flat.longitude
+      lat: truck.latitude,
+      lng: truck.longitude
+     # infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
     }
     end
   end
@@ -40,7 +41,7 @@ class TrucksController < ApplicationController
 private
 
   def truck_params
-    params.require(:truck).permit(:name, :category, :price, :description, :photo)
+    params.require(:truck).permit(:name, :category, :price, :description, :photo, :address, :latitude, :longitude)
   end
 
 end

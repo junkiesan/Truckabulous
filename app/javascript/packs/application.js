@@ -32,3 +32,26 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+// Mapbox
+import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
+mapboxgl.accessToken = 'pk.eyJ1IjoianVua2llc2FuIiwiYSI6ImNrOW83OWg5dTA3YXQzZnBtbWZyYnY5N2EifQ.pSV4ixeAeUHpg6SjgkXoHA';
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v10'
+});
+
+const mapElement = document.getElementById('map')
+const markers = JSON.parse(mapElement.dataset.markers);
+  markers.forEach((marker) => {
+    new mapboxgl.Marker()
+      .setLngLat([ marker.lng, marker.lat ])
+      .addTo(map);
+  });
+
+// import { initMapbox } from '../plugins/init_mapbox';
+
+// document.addEventListener('turbolinks:load', () => {
+//   initMapbox();
+// })
