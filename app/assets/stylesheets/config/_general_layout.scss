@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 h1 {
   color: #DBB4AD;
   font-size: 32px;
@@ -12,7 +16,6 @@ h2 {
   font-weight: bold;
 }
 
-
 h3 {
   color: #353534;
   font-size: 32px;
@@ -20,13 +23,11 @@ h3 {
 
 }
 
-
 h4 {
   color: black;
   font-size: 32px;
   font-weight: 600;
 }
-
 
 
 a {
@@ -39,9 +40,6 @@ a {
     text-decoration: none !important;
   }
 }
-// a:hover {
-//   color: #D387AB;
-// }
 
 .img-circle {
   border-radius: 50%;
@@ -60,6 +58,15 @@ a {
   font-size: 50px;
   color: rgb(230, 230, 230);
 }
-// .list-inline i:hover {
-//   color: #FFEDE1;
-// }
+
+.list-inline i:hover {
+  color: #FFEDE1;
+}
+
+.global-container{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
