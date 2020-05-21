@@ -67,3 +67,5 @@ gem 'devise'
 gem 'pundit'
 # Useful for Cloudinary service
 gem 'cloudinary', '~> 1.12.0'
+#to geoloc the user product
+gem 'geocoder'
