@@ -31,3 +31,9 @@
     </div>
   </div>
 </div>
+
+<%= link_to "Cancel Booking", booking_path(@booking),
+            method: :delete,
+            data: { confirm: "Are you sure?" } do %>
+            <i class="fa fa-trash destroy_dose"></i>
+            <% end %>

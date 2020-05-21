@@ -1,14 +1,16 @@
-<div class="booking-dashboard">
+  <div class="container-bookings">
+
     <div class="card-white" id="introduction">
-      <h1>Booking Details</h1>
+      <% @bookings.each do |booking| %>
+      <h2><%= booking.user.name %>'s Bookings</h2>
       <h4>
-        <% @bookings.each do |booking| %>
-        <%= booking.user.name %>
-        <%= booking.truck.name %>
-        <%= booking.truck.price %>
-        <% end %>
-        </h4>
-      <%= link_to "My Trucks", trucks_path, class: "btn btn-primary mr-4" %>
-      <%= link_to "My Bookings", bookings_path, class: "btn btn-primary mr-4" %>
+        <ul>
+          <li><%= booking.truck.name %> <%= booking.truck.category %></li>
+          <br>
+          <li><%= booking.truck.price %></li>
+          <% end %>
+        </ul>
+      </h4>
+      <%= link_to "Back to Profile", profile_path %>
     </div>
   </div>
