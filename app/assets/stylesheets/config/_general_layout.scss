@@ -1,34 +1,47 @@
-h2 {
-  margin: 0;
-  color: black;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-  font-family: 'Baloo Tamma 2', cursive;
-}
-
 h1 {
   color: #DBB4AD;
   font-size: 32px;
   font-weight: 600;
 }
 
-h2, h3, h4 {
+h2 {
+  font-family: 'Baloo Tamma 2', cursive;
+  margin: 0;
+  color: #7C7C7C;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+h3 {
+  color: #353534;
+  font-size: 32px;
+  font-weight: 600;
+
+}
+
+
+h4 {
   color: black;
   font-size: 32px;
   font-weight: 600;
 }
 
+
+
 a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open sans', sans-serif;
   text-decoration: none;
   color: #6B72E1;
   font-weight: 400;
   font-size: 16px;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
-a:hover {
-  color: #D387AB;
-}
+// a:hover {
+//   color: #D387AB;
+// }
 
 .img-circle {
   border-radius: 50%;
@@ -47,6 +60,6 @@ a:hover {
   font-size: 50px;
   color: rgb(230, 230, 230);
 }
-.list-inline i:hover {
-  color: #FFEDE1;
-}
+// .list-inline i:hover {
+//   color: #FFEDE1;
+// }

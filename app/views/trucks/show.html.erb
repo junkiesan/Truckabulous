@@ -4,7 +4,11 @@
 
       <%# Title section %>
 
-      <h1 class="py-3"><%= "Enjoy a wonderful yoga event with your friends" %></h1>
+      <h1 class="py-3"><%= @truck.name %></h1>
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <h5 class="py-3">Hosted by <%= @truck.user.name %></h5>
+        <%=image_tag "diane.jpg", class: "image-avatar", alt: "Pic avatar" %>
+      </div>
 
 
       <%# Banner with user pix %>
@@ -39,61 +43,59 @@
         </a>
       </div>
 
-
-
       <div class="row py-3">
         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-         <%# User description section %>
-         <div class="d-flex flex-wrap align-items-center justify-content-between">
-          <h3 class="py-3"><%="Truck hosted by Maria"%></h3>
-          <%=image_tag "diane.jpg", class: "image-avatar", alt: "Pic avatar" %>
-        </div>
-        <div class="description">
-        <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 24px; width: 24px; display: block; fill: currentcolor;">
-          <path d="m11.5 0c-5.08 0-8.5 3.56-8.5 8.5 0 4.55 1.9 8.07 8.12 15.33a.5.5 0 0 0 .76 0c6.22-7.26 8.12-10.78 8.12-15.33 0-4.94-3.41-8.5-8.5-8.5zm0 22.73c-5.76-6.78-7.5-10.07-7.5-14.23 0-4.4 2.98-7.5 7.5-7.5 4.53 0 7.5 3.1 7.5 7.5 0 4.16-1.74 7.45-7.5 14.23zm0-17.73a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill-rule="evenodd"></path>
-        </svg>
-      </div>
-      <br>
-      <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 24px; width: 24px; display: block; fill: currentcolor;">
-        <path d="M928 417L680 606l95 306c3 12-6 24-16 24-3 0-5-1-8-4L500 741 251 931c-8 5-18 3-23-4-4-5-4-7-3-12l1-1 94-306L72 417c-8-7-10-11-6-23 3-8 9-12 14-12h309l96-307c2-6 8-11 14-11 7 0 13 5 16 13l96 305h309c6 0 12 4 14 12 4 12 3 16-6 23m44-35c-8-24-29-40-52-40H640L553 65c-7-24-29-41-54-41-24 0-45 16-52 39l-87 279H80c-23 0-44 16-52 40-9 28-2 50 19 67l227 174-86 278c-7 18-4 35 8 51 19 24 53 29 78 12l226-172 226 172c10 8 21 12 33 12 36 0 65-36 54-75l-87-280 226-172c22-17 29-39 20-67"></path>
-      </svg>
-      <br>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis vero quasi tenetur sed eveniet voluptatum reiciendis quis modi neque fugiat, velit qui, minima magnam voluptatem iusto labore enim. Dolore, consequatur.</p>
 
+         <%# User description section %>
+        <div class="description">
+          <div class="d-flex">
+            <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 24px; width: 24px; display: block; fill: currentcolor;">
+              <path d="m11.5 0c-5.08 0-8.5 3.56-8.5 8.5 0 4.55 1.9 8.07 8.12 15.33a.5.5 0 0 0 .76 0c6.22-7.26 8.12-10.78 8.12-15.33 0-4.94-3.41-8.5-8.5-8.5zm0 22.73c-5.76-6.78-7.5-10.07-7.5-14.23 0-4.4 2.98-7.5 7.5-7.5 4.53 0 7.5 3.1 7.5 7.5 0 4.16-1.74 7.45-7.5 14.23zm0-17.73a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill-rule="evenodd"></path>
+            </svg>
+            <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 24px; width: 24px; display: block; fill: currentcolor;">
+              <path d="M928 417L680 606l95 306c3 12-6 24-16 24-3 0-5-1-8-4L500 741 251 931c-8 5-18 3-23-4-4-5-4-7-3-12l1-1 94-306L72 417c-8-7-10-11-6-23 3-8 9-12 14-12h309l96-307c2-6 8-11 14-11 7 0 13 5 16 13l96 305h309c6 0 12 4 14 12 4 12 3 16-6 23m44-35c-8-24-29-40-52-40H640L553 65c-7-24-29-41-54-41-24 0-45 16-52 39l-87 279H80c-23 0-44 16-52 40-9 28-2 50 19 67l227 174-86 278c-7 18-4 35 8 51 19 24 53 29 78 12l226-172 226 172c10 8 21 12 33 12 36 0 65-36 54-75l-87-280 226-172c22-17 29-39 20-67"></path>
+            </svg>
+          </div>
       </div>
+      <div class="truck-details">
+        <br>
+        <h4>Truck Details</h4>
+        <br>
+        <p><strong>Price</strong> <%= @truck.price %></p>
+        <p><strong>Description</strong> <%= @truck.description %></p>
+      </div>
+      <div class="reviews-details">
+        <br>
+        <h4>Reviews</h4>
+      </div>
+    </div>
 
       <!-- insert booking console on the left -->
 
       <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 
         <div class="booking-window">
-          <section>
-            <h3>Book this truck</h3>
-          </section>
+            <h4>Book this truck</h4>
           <div class="card-booking">
-            <!-- <div class="intro">Fill in your booking information:</div> -->
+            <p>Fill in your booking information:</p>
             <div style="margin-top: 8px; margin-bottom: 8px;">
               <label class='form w-100'>
-                <%= simple_form_for [@truck, @booking] do |f| %>
-                <%= f.input :date, label: false, placeholder: 'Date'%>
+                <%= simple_form_for [@truck, @booking], url: truck_create_booking_path(@truck, @booking), method: :post do |f| %>
+                <%= f.input :date, label: false, placeholder: 'Date', as: :string, input_html: { class: "datepicker" } %>
                 <%= f.input :number_of_participants, label: false, prompt: 'Participants', collection: Booking::NUMBER_OF_PARTICIPANTS %>
-                <%= f.button :submit, "Confirm booking", class: 'btn btn-outline-dark'%>
+                <%= f.button :submit, "Confirm booking", class: "btn btn-primary" %>
                 <% end %>
               </label>
             </div>
-            <%= link_to "Back to homepage", root_path %>
+            <%= link_to "Back to all trucks", truck_path(@truck) %>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  <!-- insert Map -->
-
-
-</div>
-</div>
 </div>

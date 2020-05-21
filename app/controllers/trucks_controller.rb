@@ -3,6 +3,7 @@ class TrucksController < ApplicationController
 
   def index
     @trucks = policy_scope(Truck)
+    @trucks = Truck.all
   end
 
   def show
@@ -39,10 +40,28 @@ class TrucksController < ApplicationController
     end
   end
 
+  def create_booking
+    @booking = Booking.new(booking_params)
+    @truck = Truck.find(params[:truck_id])
+    @booking.truck = @truck
+    @booking.user = current_user
+    authorize @truck
+    if @booking.save
+      flash[:success] = 'Thank you for your booking. You can review it on your profile'
+      render :show
+    else
+      render :show
+    end
+  end
+
 private
 
   def truck_params
     params.require(:truck).permit(:name, :category, :price, :description, :photo, :address, :latitude, :longitude)
+  end
+
+  def booking_params
+    params.require(:booking).permit(:date, :number_of_participants)
   end
 
 end

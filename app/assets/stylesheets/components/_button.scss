@@ -8,3 +8,46 @@
   background-color: #6B72E1;
   color: white;
 }
+
+
+
+.hp-buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn-white {
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 0.5px solid #4A4A4A;
+  padding: 10px 40px 10px 40px;
+  width: 250px;
+  border-radius: 50px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  font: open sans;
+}
+
+.btn-white:hover {
+  // opacity: 1;
+  color: #fda3b1
+}
+
+.btn-black {
+  color: #FFFFFF;
+  background-color: #000000;
+  border: 0.5px solid #4A4A4A;
+  padding: 10px 40px 10px 40px;
+  width: 250px;
+  border-radius: 50px;
+  // opacity: 1;
+  // transition: opacity 0.3s ease;
+}
+
+.btn-black:hover {
+  // opacity: 1;
+  color: #fda3b1
+}
