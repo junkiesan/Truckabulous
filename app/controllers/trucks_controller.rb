@@ -10,6 +10,16 @@ class TrucksController < ApplicationController
     @truck = Truck.find(params[:id])
     @booking = Booking.new
     authorize @truck
+
+    @trucks = Truck.geocoded
+    @markers = @trucks.map do |truck|
+    {
+      lat: truck.latitude,
+      lng: truck.longitude
+      #infoWindow: render_to_string(partial: "info_window", locals: { truck: truck })
+      #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+    }
+    end
   end
 
   def new
@@ -22,10 +32,8 @@ class TrucksController < ApplicationController
     @truck.user = current_user
     authorize @truck
     if @truck.save
-      flash[:notice] = 'Truck was successfully created.'
       redirect_to truck_path(@truck)
     else
-      flash[:alert] = 'Truck was not created.'
       render :new
     end
   end
@@ -47,7 +55,7 @@ class TrucksController < ApplicationController
 private
 
   def truck_params
-    params.require(:truck).permit(:name, :category, :price, :description, :photo)
+    params.require(:truck).permit(:name, :category, :price, :description, :photo, :address, :latitude, :longitude)
   end
 
   def booking_params

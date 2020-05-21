@@ -80,7 +80,7 @@
             <p>Fill in your booking information:</p>
             <div style="margin-top: 8px; margin-bottom: 8px;">
               <label class='form w-100'>
-                <%= simple_form_for [@truck, @booking], url: truck_create_booking_path(@truck, @booking), method: :post do |f| %>
+                <%= simple_form_for [@truck, @booking] do |f| %>
                 <%= f.input :date, label: false, placeholder: 'Date', as: :string, input_html: { class: "datepicker" } %>
                 <%= f.input :number_of_participants, label: false, prompt: 'Participants', collection: Booking::NUMBER_OF_PARTICIPANTS %>
                 <%= f.button :submit, "Confirm booking", class: "btn btn-primary" %>
@@ -94,7 +94,8 @@
 
     </div>
   </div>
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
-
-
-  <!-- insert Map -->
