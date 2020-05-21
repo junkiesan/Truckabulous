@@ -22,10 +22,8 @@ class TrucksController < ApplicationController
     @truck.user = current_user
     authorize @truck
     if @truck.save
-      flash[:notice] = 'Truck was successfully created.'
       redirect_to truck_path(@truck)
     else
-      flash[:alert] = 'Truck was not created.'
       render :new
     end
   end
