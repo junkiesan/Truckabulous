@@ -49,9 +49,3 @@ const markers = JSON.parse(mapElement.dataset.markers);
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
   });
-
-// import { initMapbox } from '../plugins/init_mapbox';
-
-// document.addEventListener('turbolinks:load', () => {
-//   initMapbox();
-// })
