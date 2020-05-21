@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <% @trucks.each do |truck| %>
+    <div class="card-title">
+      <h5><%= truck.name %></h5>
+    </div>
+    <p class="card-text">Price: <%= truck.price %></p>
+    <a class="btn btn-primary"><%= link_to "", truck_path(truck), class: 'card-link' %></a>
+  </div>
+  <% end %>
+</div>
+
+
+
