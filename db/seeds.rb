@@ -16,15 +16,18 @@ puts "Destroy Users"
 User.destroy_all
 
 
+
+User.create!(email: 'romain@yolo.fr', password: 'romain' )
+
 puts 'Creating user...'
 10.times do
   users = User.new(
     name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password,
-  )
+    )
   users.save!
-puts 'New user!'
+  puts 'New user!'
 end
 
 kenza = User.create(name: 'Kenza', email: 'k.mahresi@gmail.com', password: 'kenza1')
