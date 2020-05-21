@@ -49,3 +49,4 @@ const markers = JSON.parse(mapElement.dataset.markers);
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
   });
+  map.fitBounds(bounds, { padding: 80, maxZoom: 15, duration: 0 });
