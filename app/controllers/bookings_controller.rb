@@ -1,9 +1,9 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
 
-  # def index
-  #   @bookings = Booking.all
-  # end
+  def index
+    @bookings = policy_scope(Booking)
+  end
 
   def show
     @booking = Booking.find(params[:id])
@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @truck
     if @booking.save
-      flash[:success] = 'Thank you for your booking. You can review it on your profile'
+      flash[:notice] = 'Thank you for your booking. You can review it on your profile'
       render :new
     else
       render :new
