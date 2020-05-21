@@ -11,15 +11,15 @@ class TrucksController < ApplicationController
     @booking = Booking.new
     authorize @truck
 
-    # @trucks = Truck.geocoded
-    # @markers = @trucks.map do |truck|
-    # {
-    #   lat: truck.latitude,
-    #   lng: truck.longitude
-    #   #infoWindow: render_to_string(partial: "info_window", locals: { truck: truck })
-    #   #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
-    # }
-    # end
+    @trucks = Truck.geocoded
+    @markers = @trucks.map do |truck|
+    {
+      lat: truck.latitude,
+      lng: truck.longitude
+      #infoWindow: render_to_string(partial: "info_window", locals: { truck: truck })
+      #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+    }
+    end
   end
 
   def new

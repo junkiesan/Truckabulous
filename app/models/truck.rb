@@ -15,6 +15,6 @@ class Truck < ApplicationRecord
   validates :category, presence: true, inclusion: { in: ['Yoga', 'Cocktails', 'Kids', 'Food', 'Pups & Kitties', 'Fortune Teller'] }
 
   # Geocoding
-  # geocoded_by :address
-  # after_validation :geocode, if: :will_save_change_to_address?
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
