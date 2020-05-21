@@ -1,16 +1,33 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  height: 100vh;
-  > .container {
-    margin-top: 150px;
-  }
-  position: relative;
+  padding: 150px;
+  // height: 100vh;
+  // > .container {
+  //   // margin-top: 150px;
+  // }
+  // position: relative;
   text-align: center;
-
 }
-
+.banner-truck{
+  // position: relative;
+  // height: 100vh;
+  vertical-align: middle;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), image-url('night-truck.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  h1 {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Baloo Tamma 2', cursive;
+  display: block;
+  letter-spacing: 5px;
+  padding-top: 5px;
+}
+}
 .banner h1 {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -22,7 +39,6 @@
   letter-spacing: 5px;
   padding-top: 5px;
 }
-
 .banner p {
   font-size: 20px;
   color: white;

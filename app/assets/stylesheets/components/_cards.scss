@@ -4,7 +4,6 @@
   grid-gap: 16px;
   margin-top: 40px;
   margin-bottom: 60px;
-
   .card-category {
     background-size: cover;
     background-position: center;
@@ -21,33 +20,29 @@
     margin: 10px 20px 10px 20px;
     }
 }
-
 .card {
   margin-top: 40px;
   margin-bottom: 60px;
 }
-
-
 .card-booking {
   padding: 20px;
   border-radius: 5px;
   width: 360px;
   display: inline;
 }
-
 .card-new-truck {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
   width: 360px;
 }
-
 .card-whole {
     position: absolute;
     // top: 100px;
     right: 100px;
+    transform: translateY(-50%);
+    top: 50%;
 }
-
 .booking-window {
     position: absolute;
     // top: 100px;
@@ -58,7 +53,6 @@
     padding: 15px;
     border: solid 1px lightgrey;
 }
-
 .card-white {
   background-color: white;
   padding: 20px 20px 40px 20px;
@@ -68,7 +62,6 @@
   margin: 20px 0px;
   text-align: center;
 }
-
 .card-last {
   background-color: white;
   padding: 20px;
@@ -79,35 +72,30 @@
   margin: 20px 0px;
   text-align: center;
 }
-
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
   }
 }
-
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
     grid-template-columns: 1fr;
   }
 }
-
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
