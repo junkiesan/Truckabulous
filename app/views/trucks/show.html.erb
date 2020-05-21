@@ -6,7 +6,7 @@
 
       <h1 class="py-3"><%= @truck.name %></h1>
       <div class="d-flex flex-wrap align-items-center justify-content-between">
-        <h5 class="py-3">Hosted by</h5>
+        <h5 class="py-3">Hosted by <%= @truck.user.name %></h5>
         <%=image_tag "diane.jpg", class: "image-avatar", alt: "Pic avatar" %>
       </div>
 
@@ -80,7 +80,7 @@
             <p>Fill in your booking information:</p>
             <div style="margin-top: 8px; margin-bottom: 8px;">
               <label class='form w-100'>
-                <%= simple_form_for [@truck, @booking] do |f| %>
+                <%= simple_form_for [@truck, @booking], url: truck_bookings_path(@truck, @booking), method: :post do |f| %>
                 <%= f.input :date, label: false, placeholder: 'Date', as: :string, input_html: { class: "datepicker" } %>
                 <%= f.input :number_of_participants, label: false, prompt: 'Participants', collection: Booking::NUMBER_OF_PARTICIPANTS %>
                 <%= f.button :submit, "Confirm booking", class: "btn btn-flat" %>

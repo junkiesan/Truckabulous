@@ -23,7 +23,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @truck
     if @booking.save
-      redirect_to booking_path(@booking)
+      flash[:success] = 'Thank you for your booking. You can review it on your profile'
+      render :new
     else
       render :new
     end
