@@ -4,7 +4,7 @@
 
       <%# Title section %>
 
-      <h1 class="py-3"><%= "Enjoy a wonderful yoga event with your friends" %></h1>
+      <h1 class="py-3"><%= truck.name %></h1>
 
 
       <%# Banner with user pix %>
@@ -39,10 +39,9 @@
         </a>
       </div>
 
-
-
       <div class="row py-3">
         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+
          <%# User description section %>
          <div class="d-flex flex-wrap align-items-center justify-content-between">
           <h3 class="py-3"><%="Truck hosted by Maria"%></h3>
@@ -61,6 +60,7 @@
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis vero quasi tenetur sed eveniet voluptatum reiciendis quis modi neque fugiat, velit qui, minima magnam voluptatem iusto labore enim. Dolore, consequatur.</p>
 
       </div>
+    </div>
 
       <!-- insert booking console on the left -->
 
@@ -81,20 +81,17 @@
                 <% end %>
               </label>
             </div>
-            <%= link_to "Back to homepage", root_path %>
+            <%= link_to "Back to all trucks", truck_path(truck) %>
           </div>
         </div>
       </div>
+
     </div>
   </div>
+</div>
 
 
 
 
 
   <!-- insert Map -->
-
-
-</div>
-</div>
-</div>
