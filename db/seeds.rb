@@ -16,16 +16,16 @@ puts "Destroy Users"
 User.destroy_all
 
 
-puts 'Creating user...'
-10.times do
-  users = User.new(
-    name: Faker::Name.name,
-    email: Faker::Internet.email,
-    password: Faker::Internet.password,
-  )
-  users.save!
-puts 'New user!'
-end
+# puts 'Creating user...'
+# 10.times do
+#   users = User.new(
+#     name: Faker::Name.name,
+#     email: Faker::Internet.email,
+#     password: Faker::Internet.password,
+#   )
+#   users.save!
+# puts 'New user!'
+# end
 
 
 Truck.create!(name: 'Tacos Tuesday', category: 'Food', price: 150, description: 'The best Mexican tacos in town! Vegeterian options also available', user:User.first)
@@ -57,6 +57,6 @@ Truck.create!(name: 'Magic', category: 'Kids', price: 90, description: 'Magician
 # puts 'Trucks created you have the best db ever bae!'
 
 
-# User.create!(email: 'romain@yolo.fr', password: 'romain' )
-# Truck.create!(name: 'Yoga Teacher', category: 'Yoga', price: 100, user:User.first)
-# Truck.create!(name: 'Drink n Code', category: 'Cocktails', price: 100, user:User.first)
+user = User.new(email: 'romain@yolo.fr', password: 'romain' )
+user.save!
+
