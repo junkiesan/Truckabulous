@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 h2 {
   margin: 0;
   color: black;
@@ -49,4 +53,11 @@ a:hover {
 }
 .list-inline i:hover {
   color: #FFEDE1;
+}
+
+.global-container{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  padding-top: 120px;
 }

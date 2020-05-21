@@ -1,14 +1,22 @@
-<div class="card">
-  <div class="card-body">
-    <% @trucks.each do |truck| %>
-    <div class="card-title">
-      <h5><%= truck.name %></h5>
-    </div>
-    <p class="card-text">Price: <%= truck.price %></p>
-    <a class="btn btn-primary"><%= link_to "", truck_path(truck), class: 'card-link' %></a>
+<div class= "container">
+  <h2>Find what you need 🌈</h2>
+</div>
+
+<div class="container-cards-index d-flex flex-wrap">
+
+<div>
+  <% @trucks.each do |truck| %>
+    <div class="col-4">
+      <div class="card" style="width: 100%;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> <%= truck.name %></h5>
+          <p class="card-text"><%= truck.price %></p>
+          <a href="#" class="btn btn-trucks-index">Book now</a>
+        </div>
+      </div>
   </div>
   <% end %>
 </div>
 
-
-
+</div>
