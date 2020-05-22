@@ -43,6 +43,39 @@
 }
 
 
+.btn-trucks-index {
+  background-color: #6B72E1;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+}
 
+.btn-show {
+  text-decoration: none !important;
+  background-color: #FDA3B1 !important;
+  color: white !important;
+  padding: 15px 20px !important;
+  border-radius: 4px !important;
+  &:hover {
+    color: #6B72E1 !important;
+  }
+
+}
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    width: 45%;
+    text-align: center;
+
+  }
+  input {
+    width: 45%;
+    text-align: center;
+
+  }
+}
 
 
