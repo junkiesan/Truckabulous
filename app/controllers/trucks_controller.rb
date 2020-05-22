@@ -31,7 +31,7 @@ class TrucksController < ApplicationController
     @truck = Truck.new(truck_params)
     @truck.user = current_user
     authorize @truck
-    if @truck.save
+    if @truck.save!
       redirect_to truck_path(@truck)
     else
       render :new
