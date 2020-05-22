@@ -3,7 +3,7 @@ class TrucksController < ApplicationController
 
   def index
     @trucks = policy_scope(Truck)
-    @trucks = Truck.all
+    @trucks = Truck.order(created_at: :desc)
   end
 
   def show
@@ -26,7 +26,7 @@ class TrucksController < ApplicationController
     @truck = Truck.new(truck_params)
     @truck.user = current_user
     authorize @truck
-    if @truck.save!
+    if @truck.save
       redirect_to truck_path(@truck)
     else
       render :new
