@@ -9,7 +9,7 @@
           <label class='form w-100'>
             <%= simple_form_for @truck do |f| %>
             <%= f.input :name, label: false, placeholder: 'Name' %>
-            <%= f.input :category, label: false, prompt: 'Category', collection: Truck::CATEGORIES%>
+            <%= f.input :category, label: false, prompt: 'Category', collection: Truck::CATEGORIES %>
             <%= f.input :price, label: false, placeholder: 'Price' %>
             <%= f.input :description, label: false, placeholder: 'Description' %>
             <%= f.input :address, label: false, placeholder: 'Address' %>
