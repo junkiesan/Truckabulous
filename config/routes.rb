@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     post '/create_booking', to: 'trucks#create_booking'
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:show, :index]
+  resources :bookings, only: [:show, :index, :destroy]
   get "/profile", to: 'pages#profile'
+  get "/my_trucks", to: 'pages#my_trucks'
+
 end

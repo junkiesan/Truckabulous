@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def my_trucks
+    @trucks = current_user.trucks
+  end
 end
