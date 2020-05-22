@@ -1,8 +1,9 @@
   <div class="container-bookings">
 
     <div class="card-white" id="introduction">
+      <h2>My Bookings</h2>
       <% @bookings.each do |booking| %>
-      <h2><%= booking.user.name %>'s Bookings</h2>
+      <h3><%= booking.user.name %>'s Bookings</h3>
       <h4>
         <ul>
           <li><%= booking.truck.name %> <%= booking.truck.category %></li>
@@ -11,6 +12,7 @@
           <% end %>
         </ul>
       </h4>
+      <br>
       <%= link_to "My Profile", profile_path, class: "btn btn-primary mr-4" %>
       <%= link_to "Homepage", root_path, class: "btn btn-primary mr-4" %>
     </div>
