@@ -1,15 +1,24 @@
-  <div class="container-bookings">
-
-    <div class="card-white" id="introduction">
-      <h2>My Bookings</h2>
-      <% @bookings.each do |booking| %>
-        <h4>Your upcoming booking is:</h4>
-          Name: <%= booking.truck.name %>
-          Date: <%= booking.date %>
-          Participants: <%= booking.number_of_participants %>
-          Category: <%= booking.truck.category %>
-          Price: <%= booking.truck.price %>
-          <% end %>
+<div class="container-bookings">
+  <div class="card-white" id="introduction">
+    <table class="table table-bordered">
+        <tbody>
+          <h2>My Bookings</h2>
+          <thead>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Participants</th>
+            <th>Price</th>
+          </thead>
+          <% @bookings.each do |booking| %>
+            <tr>
+              <td><%= booking.truck.name %></td>
+              <td><%= booking.date %></td>
+              <td><%= booking.number_of_participants %></td>
+              <td><%= booking.price %></td>
+              <% end %>
+            </tr>
+        </tbody>
+      </table>
       <br>
       <%= link_to "My Profile", profile_path, class: "btn-show" %>
       <%= link_to "Homepage", root_path, class: "btn-show" %>
