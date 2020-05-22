@@ -18,7 +18,7 @@ User.destroy_all
 
 
 
-User.create!(email: 'romain@yolo.fr', password: 'romain' )
+# User.create!(email: 'romain@yolo.fr', password: 'romain' )
 
 puts 'Creating user...'
 10.times do
@@ -32,6 +32,7 @@ puts 'Creating user...'
 end
 
 kenza = User.create(name: 'Kenza', email: 'k.mahresi@gmail.com', password: 'kenza1')
+melanie = User.create(name: 'Mélanie', email: 'm.andral@gmail.com', password: 'melanie1')
 
 
 truck_1 = Truck.new(name: 'Tacos Tuesday', category: 'Food', price: 150, description: 'The best Mexican tacos in town! Vegeterian options also available', user: kenza, address: "16 villa gaudelet, paris")
@@ -39,7 +40,7 @@ file = URI.open('https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.
 truck_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 truck_1.save!
 
-truck_2 = Truck.new(name: 'Sushi & Sashimi', category: 'Food', price: 200, description: 'Fresh fish for your sushi party!', user:User.first, address: "72 avenue parmentier, paris")
+truck_2 = Truck.new(name: 'Sushi & Sashimi', category: 'Food', price: 200, description: 'Fresh fish for your sushi party!', user: User.first, address: "72 avenue parmentier, paris")
 file = URI.open('https://www.easy-sushi83.com/images/tetiere/sushis-restaurant.jpg')
 truck_2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 truck_2.save!
