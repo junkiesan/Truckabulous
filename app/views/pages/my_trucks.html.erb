@@ -2,17 +2,18 @@
 
     <div class="card-white" id="introduction">
       <h2>My Trucks</h2>
-      <% @trucks.each do |truck| %>
-      <%= link_to "View my truck", truck_path(truck), class: "btn btn-primary mr-4"  %>
-        <ul>
-          <li>Name: <%= truck.name %></li>
-          <li>Category: <%= truck.category %></li>
-          <li>Price: <%= truck.price %></li>
-          <li>Description: <%= truck.description %></li>
-          <% end %>
-        </ul>
       <br>
+      <% @trucks.each do |truck| %>
+        <ul>
+          <p>Name: <%= truck.name %><br>
+          Category: <%= truck.category %><br>
+          Price: <%= truck.price %><br>
+          Description: <%= truck.description %></p>
+          </ul>
+      <br>
+      <%= link_to "View my truck", truck_path(truck), class: "btn btn-primary mr-4"  %>
       <%= link_to "My Profile", profile_path, class: "btn btn-primary mr-4" %>
       <%= link_to "Homepage", root_path, class: "btn btn-primary mr-4" %>
+      <% end %>
     </div>
   </div>
