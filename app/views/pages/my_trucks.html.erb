@@ -1,0 +1,20 @@
+  <div class="container-bookings">
+
+    <div class="card-white" id="introduction">
+      <h2>My Trucks</h2>
+      <% @trucks.each do |truck| %>
+      <h3><%= truck.user.name %>'s trucks</h3>
+      <h4>
+        <ul>
+          <li><%= truck.name %> <%= truck.category %></li>
+          <br>
+          <li><%= truck.price %></li>
+          <% end %>
+        </ul>
+        <%= link_to "View", truck_path(truck), class: "btn btn-primary mr-4"  %>
+      </h4>
+      <br>
+      <%= link_to "My Profile", profile_path, class: "btn btn-primary mr-4" %>
+      <%= link_to "Homepage", root_path, class: "btn btn-primary mr-4" %>
+    </div>
+  </div>

@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:show, :index, :destroy]
   get "/profile", to: 'pages#profile'
+  get "/my_trucks", to: 'pages#my_trucks'
+
 end
