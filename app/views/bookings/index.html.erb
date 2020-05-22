@@ -3,15 +3,15 @@
     <div class="card-white" id="introduction">
       <h2>My Bookings</h2>
       <% @bookings.each do |booking| %>
-      <h3><%= booking.user.name %>'s Bookings</h3>
-      <h4>
+        <h4>Your upcoming booking is:</h4>
         <ul>
-          <li><%= booking.truck.name %> <%= booking.truck.category %></li>
-          <br>
-          <li><%= booking.truck.price %></li>
+          <li>Name: <%= booking.truck.name %></li>
+          <li>Date: <%= booking.date %></li>
+          <li>Date: <%= booking.number_of_participants %></li>
+          <li>Category: <%= booking.truck.category %></li>
+          <li>Price: <%= booking.truck.price %></li>
           <% end %>
         </ul>
-      </h4>
       <br>
       <%= link_to "My Profile", profile_path, class: "btn btn-primary mr-4" %>
       <%= link_to "Homepage", root_path, class: "btn btn-primary mr-4" %>
