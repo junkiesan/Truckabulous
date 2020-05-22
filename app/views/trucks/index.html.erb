@@ -11,11 +11,13 @@
   <% @trucks.each do |truck| %>
     <div class="col-4">
       <div class="card" style="width: 100%;">
-        <img src="..." class="card-img-top" alt="...">
+        <% if truck.photo.attached? %>
+        <%= cl_image_tag truck.photo.key, class: "index-cards-photo" %>
+        <% end %>
         <div class="card-body">
           <h5 class="card-title"> <%= truck.name %></h5>
           <p class="card-text"> Price : <%=truck.price %></p>
-          <a href="#" class="btn btn-trucks-index">Book now</a>
+          <%= link_to "Book now", truck_path(truck), class: "btn btn-trucks-index"  %>
         </div>
       </div>
     </div>
