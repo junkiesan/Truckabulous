@@ -72,6 +72,13 @@
   margin: 20px 0px;
   text-align: center;
 }
+
+.index-cards-photo {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
